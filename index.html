@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas - exercice 3</title>
+  </head>
+  <body>
+    <canvas id="canvas" height="400" width="400"></canvas>
+    <script type="text/javascript">
+      //declaration de l variable canvas qui reprend l'id de la balise
+      var canvas = document.getElementById('canvas');
+      //A celle-ci, on applique le contexte 2d
+      var context = canvas.getContext('2d');
+
+      context.fillStyle = 'rgb(0,179,83)'; // spécifie la couleur verte
+      //création d'un carré avec la méthode fill (les deux premiers chiffres représentent la position sur la page (largeur et hauteur)n les deux suivants sont la largeur et la taille)
+      context.fillRect(70, 60, 160, 90);
+
+      context.fillStyle = 'rgb(0,179,83)';
+      context.fillRect(35, 100, 50, 50);
+
+      context.fillStyle = 'rgb(0,179,83)';
+      context.fillRect(215, 100, 50, 50);
+
+      context.fillStyle = 'rgb(205,205,205)';
+      context.beginPath();
+      //Les deux premiers chiffres spécifient le positionnement de départ, ensuite c'est l'angle de départ et l'angle de fin, exprimés en radiant.
+      context.arc(65, 175, 25, 0,Math.PI*2)
+      context.lineWidth = 2; //méthode qui permet d'épaissir la ligne
+      context.stroke(); // contour
+      context.fill(); // rempli
+
+      context.fillStyle = 'rgb(205,205,205)';
+      context.beginPath();
+      context.arc(232, 175, 25, 0,Math.PI*2)
+      context.lineWidth = 2;
+      context.stroke();
+      context.fill();
+      //fenêtre
+      context.fillStyle = 'white';
+      context.fillRect(80, 65, 50, 35);
+      //fenêtre
+      context.fillStyle = 'white';
+      context.fillRect(140, 65, 50, 35);
+      //fenêtre
+      context.fillStyle = 'white';
+      context.fillRect(198, 65, 23, 35);
+      //phare
+      context.fillStyle = 'yellow';
+      context.fillRect(35, 100, 10, 10);
+
+    </script>
+  </body>
+</html>
